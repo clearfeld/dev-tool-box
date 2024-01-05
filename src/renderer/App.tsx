@@ -1,39 +1,44 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import { MemoryRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import icon from '../../assets/icon.svg';
 import './App.css';
+import Navbar from './components/navbar';
+import Sidebar from './components/sidebar';
+import StringCaseConverter from './tools/strings/string-case-converter';
+
+function CardLink(props) {
+  return (
+    <Link to="/tool/string/stringcase">
+      <div
+        style={{
+          backgroundColor: 'var(--color-global-dark-gray-hover)',
+          margin: '1rem',
+          padding: '0.5rem',
+          borderRadius: '0.5rem',
+        }}
+      >
+        <h2>{props.title}</h2>
+      </div>
+    </Link>
+  );
+}
 
 function Hello() {
   return (
     <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
+      <Navbar />
+
+      <Sidebar />
+
+      <div
+        style={{
+          position: 'absolute',
+          marginLeft: 'var(--sidebar-size)',
+          marginTop: '4rem',
+          top: '0',
+          left: '0',
+        }}
+      >
+        <CardLink title="String Case Converter" />
       </div>
     </div>
   );
@@ -41,10 +46,13 @@ function Hello() {
 
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Hello />} />
-      </Routes>
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Hello />} />
+          <Route path="/tool/string/stringcase" element={<StringCaseConverter />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
