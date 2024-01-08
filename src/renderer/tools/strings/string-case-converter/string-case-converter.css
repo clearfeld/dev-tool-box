@@ -1,0 +1,41 @@
+.string-case-converter {
+    position: absolute;
+    margin-left: var(--sidebar-size);
+    margin-top: 4rem;
+    top: 0;
+    left: 0;
+    border: 1px solid pink;
+    padding: 40px;
+}
+
+.string-case-converter__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.string-case-converter__button {
+    all: initial;
+    max-height: 28px;
+    background-color: steelblue;
+    border-radius: 4px;
+    padding: 4px;
+
+}
+
+.string-case-converter__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.string-case-converter__right {}
+
+/* position: 'absolute',
+        marginLeft: 'var(--sidebar-size)',
+        marginTop: '4rem',
+        top: '0',
+        left: '0', */
