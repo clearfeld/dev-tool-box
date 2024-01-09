@@ -6,21 +6,31 @@
     left: 0;
     border: 1px solid pink;
     padding: 40px;
+
+    display: flex;
+    gap: 2rem;
+
+
+    /* weird overflow, fix later */
+    width: calc(100% - 20rem);
 }
 
 .string-case-converter__wrapper {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
     align-items: center;
-    gap: 1rem;
+    border: 1px solid brown;
 }
 
 .string-case-converter__button {
     all: initial;
     max-height: 28px;
+    max-width: 3rem;
     background-color: steelblue;
     border-radius: 4px;
     padding: 4px;
+    text-align: center;
 
 }
 
@@ -28,11 +38,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-
+    border: 1px solid blue;
+    padding: .75rem;
+    width: 100%;
+    height: 100%;
 }
 
-.string-case-converter__right {}
+.string-case-converter__text-area {
+    width: 100%;
+    height: 100%;
+}
+
+.string-case-converter__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid purple;
+    padding: .75rem;
+
+    width: 100%;
+    height: 100%;
+}
 
 /* position: 'absolute',
         marginLeft: 'var(--sidebar-size)',
