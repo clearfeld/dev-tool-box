@@ -1,0 +1,43 @@
+.jwt__decoder__ {
+	&wrapper {
+		position: absolute;
+		margin-left: var(--sidebar-size);
+		margin-top: 4rem;
+		top: 0;
+		left: 0;
+		padding: 2rem;
+
+		width: calc(100% - var(--sidebar-size) - 4rem);
+		height: calc(100% - 8rem);
+	}
+
+	&title {
+		margin: 0;
+		margin-bottom: 1rem;
+	}
+
+	&inner-wrap {
+		height: calc(100% - 4rem);
+		display: flex;
+		gap: 2rem;
+	}
+
+	&right-wrap {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	&textarea {
+		background-color: var(--color-bg);
+		color: var(--color-text);
+		border: 0.0625rem solid var(--color-border);
+
+		padding: 1rem;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		resize: none;
+	}
+}

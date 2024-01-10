@@ -5,6 +5,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <p>String</p>
+	  <p>Jwt</p>
     </div>
   );
 }
