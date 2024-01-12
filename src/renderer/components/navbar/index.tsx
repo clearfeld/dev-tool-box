@@ -11,6 +11,10 @@ function Navbar() {
 			</Link>
 
 			<div>
+				<Link to="/snippets">Snippets</Link>
+			</div>
+
+			<div>
 				<Link to="/cheatsheets">Cheat Sheets</Link>
 			</div>
 
