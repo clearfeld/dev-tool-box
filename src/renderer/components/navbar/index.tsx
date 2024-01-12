@@ -4,14 +4,21 @@ import icon from '../../../../assets/icon.svg';
 import './Navbar.css';
 
 function Navbar() {
-  return (
-    <div className="navbar">
-      <Link to="/">
-        <img width="32" alt="icon" src={icon} />
-      </Link>
-      {/* <div>
+	return (
+		<div className="navbar">
+			<Link to="/">
+				<img width="32" alt="icon" src={icon} />
+			</Link>
+
+			<div>
+				<Link to="/cheatsheets">Cheat Sheets</Link>
+			</div>
+
+			{/* <div>
         <input type="text" />
       </div>
+
+
 
       <div>
         <a
@@ -27,8 +34,8 @@ function Navbar() {
           </button>
         </a>
       </div> */}
-    </div>
-  );
+		</div>
+	);
 }
 
 export default Navbar;

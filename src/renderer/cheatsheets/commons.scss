@@ -1,0 +1,21 @@
+.cheatsheet__commons__ {
+	&group-block {
+		background-color: #181818;
+		border-radius: 0.25rem;
+		padding: 1rem;
+		padding-bottom: 0.125rem;
+	}
+
+	&help-line__ {
+		&title {
+			margin-top: 0;
+		}
+
+		&cmd {
+			background-color: #1b1d23;
+			margin-bottom: 1.5rem;
+			padding: 1rem;
+			border-radius: 0.25rem;
+		}
+	}
+}

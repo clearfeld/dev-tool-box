@@ -2,12 +2,12 @@
 import './sidebar.css';
 
 function Sidebar() {
-  return (
-    <div className="sidebar">
-      <p>String</p>
-	  <p>Jwt</p>
-    </div>
-  );
+	return (
+		<div className="sidebar">
+			<p>String</p>
+			<p>Jwt</p>
+		</div>
+	);
 }
 
 export default Sidebar;

@@ -32,38 +32,33 @@ function JwtDecoder() {
 	}
 
 	return (
-		<div>
-			<Navbar />
-			<Sidebar />
+		<div className="jwt__decoder__wrapper">
+			<h1 className="jwt__decoder__title">Jwt Decoder</h1>
 
-			<div className="jwt__decoder__wrapper">
-				<h1 className="jwt__decoder__title">Jwt Decoder</h1>
+			<div className="jwt__decoder__inner-wrap">
+				<textarea
+					className="jwt__decoder__textarea"
+					name=""
+					id=""
+					value={text}
+					onChange={onChangeText}
+				/>
 
-				<div className="jwt__decoder__inner-wrap">
+				<div className="jwt__decoder__right-wrap">
 					<textarea
 						className="jwt__decoder__textarea"
 						name=""
 						id=""
-						value={text}
-						onChange={onChangeText}
+						value={header}
+						disabled
 					/>
-
-					<div className="jwt__decoder__right-wrap">
-						<textarea
-							className="jwt__decoder__textarea"
-							name=""
-							id=""
-							value={header}
-							disabled
-						/>
-						<textarea
-							className="jwt__decoder__textarea"
-							name=""
-							id=""
-							value={payload}
-							disabled
-						/>
-					</div>
+					<textarea
+						className="jwt__decoder__textarea"
+						name=""
+						id=""
+						value={payload}
+						disabled
+					/>
 				</div>
 			</div>
 		</div>
