@@ -31,6 +31,7 @@ import Snippets from './snippets';
 import CardLink from './components/commons/card-block';
 
 import { ReactComponent as JWTSVG } from '../../assets/svgs/jwt.svg';
+import HashGenerator from './tools/hash/generator';
 
 function Hello() {
 	return (
@@ -41,6 +42,7 @@ function Hello() {
 				marginTop: '4rem',
 				top: '0',
 				left: '0',
+				display: 'flex',
 			}}
 		>
 			<CardLink
@@ -48,6 +50,8 @@ function Hello() {
 				link="/tool/string/stringcase"
 				description="test"
 			/>
+
+			<CardLink title="Hash Generator" link="/tool/hash/generator" />
 
 			<CardLink
 				title="Jwt Decoder"
@@ -103,6 +107,11 @@ export default function App() {
 				/>
 
 				<Route path="/tool/jwt/decoder" element={<JwtDecoder />} />
+
+				<Route
+					path="/tool/hash/generator"
+					element={<HashGenerator />}
+				/>
 
 				<Route path="/snippets" element={<Snippets />} />
 				<Route
