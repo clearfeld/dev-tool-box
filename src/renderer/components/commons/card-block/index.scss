@@ -1,0 +1,29 @@
+.card-link__ {
+	&link-unstyle {
+		color: var(--color-text);
+	}
+
+	&wrapper {
+		background-color: var(--navbar-color-bg);
+		margin: 1rem;
+		padding: 1.25rem 1.5rem;
+		border-radius: 0.5rem;
+
+		transition: background-color var(--transition-speed) ease;
+
+		&:hover {
+			background-color: var(--navbar-color-bg-hover);
+		}
+	}
+
+	&title {
+		margin: 0;
+		margin-bottom: 0.5rem;
+		font-size: 1.25rem;
+		margin-top: 0.25rem;
+	}
+
+	&description {
+		color: var(--color-text-sub);
+	}
+}

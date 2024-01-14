@@ -1,23 +1,7 @@
 // import './index.scss';
 
 import { Link } from 'react-router-dom';
-
-function CardLink(props) {
-	return (
-		<Link to={props.link}>
-			<div
-				style={{
-					backgroundColor: 'var(--color-global-dark-gray-hover)',
-					margin: '1rem',
-					padding: '0.5rem',
-					borderRadius: '0.5rem',
-				}}
-			>
-				<h2>{props.title}</h2>
-			</div>
-		</Link>
-	);
-}
+import CardLink from '../components/commons/card-block';
 
 function Snippets() {
 	return (
