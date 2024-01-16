@@ -1,0 +1,103 @@
+import "./index.scss";
+
+import { useEffect, useState } from "react";
+
+interface I_InfoBlockProps {
+	title: string;
+	value: string;
+}
+
+function InfoBlock(props: I_InfoBlockProps) {
+	return (
+		<div className="tools__keycode-info__info-block__wrapper">
+			<p className="tools__keycode-info__info-block__title">{props.title}</p>
+
+			<div className="tools__keycode-info__info-block__inner-wrap">
+				<p>{props.value}</p>
+			</div>
+		</div>
+	);
+}
+
+function KeycodeInfo() {
+	const [keyCode, setKeyCode] = useState();
+
+	const [key, setKey] = useState();
+	const [code, setCode] = useState();
+	const [location, setLocation] = useState();
+	const [which, setWhich] = useState();
+	// const [charCode, setCharCode] = useState();
+
+	const [control, setControl] = useState();
+	const [alt, setAlt] = useState();
+	const [shift, setShift] = useState();
+	const [meta, setMeta] = useState();
+
+	useEffect(() => {
+		document.addEventListener("keydown", Test);
+
+		return () => {
+			document.addEventListener("keydown", Test);
+		};
+	}, []);
+
+	function Test(e: any): void {
+		e.preventDefault();
+
+		console.log(e);
+
+		setKeyCode(e.keyCode);
+		setKey(e.key);
+		setCode(e.code);
+
+		switch (e.location) {
+			case 0:
+				setLocation("0 - General keys");
+				break;
+			case 1:
+				setLocation("1 - Left side modifier keys");
+				break;
+			case 2:
+				setLocation("2 - Right side modifier keys");
+				break;
+		}
+		setWhich(e.which);
+		// setCharCode(e.charCode);
+
+		setControl(e.ctrlKey);
+		setAlt(e.altKey);
+		setShift(e.shiftKey);
+		setMeta(e.metaKey);
+	}
+
+	return (
+		<div className="jwt__decoder__wrapper">
+			{!keyCode ? (
+				<div className="tools__keycode-info__press-key">
+					Pres any key to get the Javascript event keycode
+				</div>
+			) : (
+				<div>
+					<div className="tools__keycode-info__main-text">
+						{key} - {which}
+					</div>
+
+					<div className="tools__keycode-info__info-block-wrap">
+						<InfoBlock title="key" value={key} />
+						<InfoBlock title="code" value={code} />
+						<InfoBlock title="location" value={location} />
+						<InfoBlock title="which" value={which} />
+						{/* <div>charCode - {charCode}</div> */}
+
+						<InfoBlock title="control" value={control ? "true" : "false"} />
+						<InfoBlock title="alt" value={alt ? "true" : "false"} />
+						<InfoBlock title="shift" value={shift ? "true" : "false"} />
+						<InfoBlock title="meta" value={meta ? "true" : "false"} />
+					</div>
+				</div>
+			)}
+		</div>
+	);
+}
+
+export default KeycodeInfo;

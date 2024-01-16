@@ -55,7 +55,7 @@ function Tools() {
 			<CardLink
 				title="Hash Generator"
 				link="/tool/hash/generator"
-				description="Generate uuids (v1 and v4)"
+				description="Convert string into various hashs"
 				Icon={
 					<img
 						src={hashLogo}
@@ -101,6 +101,23 @@ function Tools() {
 						}}
 					/>
 				}
+			/>
+
+			<CardLink
+				title="Keycode Info"
+				link="/tool/keycode-info"
+				description="Get details for pressed key"
+				// Icon={
+				// 	<img
+				// 		src={hashLogo}
+				// 		className="svg-filter"
+				// 		style={{
+				// 			// filter: "grayscale(1)",
+				// 			width: "2rem",
+				// 			height: "2rem",
+				// 		}}
+				// 	/>
+				// }
 			/>
 		</div>
 	);

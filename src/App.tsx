@@ -36,6 +36,7 @@ import CardLink from "./components/commons/card-block";
 import HashGenerator from "./tools/hash/generator";
 import UuidGenerator from "./tools/uuid/generator";
 import Tools from "./tools";
+import KeycodeInfo from "./tools/keycode-info";
 
 export default function App() {
 	const [showCmdPalette, setShowCmdPalette] = useState<boolean>(false);
@@ -91,6 +92,8 @@ export default function App() {
 				<Route path="/tool/hash/generator" element={<HashGenerator />} />
 
 				<Route path="/tool/uuid/generator" element={<UuidGenerator />} />
+
+				<Route path="/tool/keycode-info" element={<KeycodeInfo />} />
 
 				<Route path="/snippets" element={<Snippets />} />
 				<Route path="/snippets/typescript" element={<SnippetsTypescript />} />

@@ -21,7 +21,7 @@ function Cheatsheets() {
 			<CardLink
 				title="NPM"
 				link="/cheatsheets/npm"
-				description="Cheat sheet for the vim editor"
+				description="Cheat sheet for npm"
 				Icon={
 					<img
 						src={packageLogo}
