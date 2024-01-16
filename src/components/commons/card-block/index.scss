@@ -1,29 +1,41 @@
 .card-link__ {
-	&link-unstyle {
-		color: var(--color-text);
-	}
+  &link-unstyle {
+    color: var(--color-text);
+  }
 
-	&wrapper {
-		background-color: var(--navbar-color-bg);
-		margin: 1rem;
-		padding: 1.25rem 1.5rem;
-		border-radius: 0.5rem;
+  &wrapper {
+    background-color: var(--navbar-color-bg);
+    margin: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem;
 
-		transition: background-color var(--transition-speed) ease;
+    transition: background-color var(--transition-speed) ease;
 
-		&:hover {
-			background-color: var(--navbar-color-bg-hover);
-		}
-	}
+    &:hover {
+      background-color: var(--navbar-color-bg-hover);
+    }
+  }
 
-	&title {
-		margin: 0;
-		margin-bottom: 0.5rem;
-		font-size: 1.25rem;
-		margin-top: 0.25rem;
-	}
+  &inner-wrap {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
 
-	&description {
-		color: var(--color-text-sub);
-	}
+  &title {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+	color: var(--color-text);
+  }
+
+  &description {
+    color: var(--color-text-sub);
+  }
+
+  &img-wrap {
+    display: flex;
+    align-self: start;
+  }
 }

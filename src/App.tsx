@@ -33,40 +33,9 @@ import Snippets from "./snippets";
 
 import CardLink from "./components/commons/card-block";
 
-import JWTSVG from "./assets/svgs/jwt.svg";
 import HashGenerator from "./tools/hash/generator";
 import UuidGenerator from "./tools/uuid/generator";
-
-function Hello() {
-	return (
-		<div
-			style={{
-				position: "absolute",
-				marginLeft: "var(--sidebar-size)",
-				marginTop: "4rem",
-				top: "0",
-				left: "0",
-				display: "flex",
-			}}
-		>
-			<CardLink
-				title="String Case Converter"
-				link="/tool/string/stringcase"
-				description="test"
-			/>
-
-			<CardLink title="Hash Generator" link="/tool/hash/generator" />
-
-			<CardLink title="Uuid Generator" link="/tool/uuid/generator" />
-
-			<CardLink
-				title="Jwt Decoder"
-				link="/tool/jwt/decoder"
-				// Icon={<JWTSVG width="2.5rem" height="2.5rem" />}
-			/>
-		</div>
-	);
-}
+import Tools from "./tools";
 
 export default function App() {
 	const [showCmdPalette, setShowCmdPalette] = useState<boolean>(false);
@@ -111,7 +80,7 @@ export default function App() {
 			>
 				{/* <Route path="login" element={<Login />} /> */}
 
-				<Route path="/" element={<Hello />} />
+				<Route path="/" element={<Tools />} />
 				<Route
 					path="/tool/string/stringcase"
 					element={<StringCaseConverter />}
