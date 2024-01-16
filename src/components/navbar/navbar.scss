@@ -1,0 +1,29 @@
+.navbar__ {
+  &wrapper {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: var(--color-border);
+    height: 4rem;
+  }
+
+  &link-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &link-text {
+    color: var(--color-text);
+    margin-left: 0.5rem;
+  }
+
+  &right-side {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
