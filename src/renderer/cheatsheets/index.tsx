@@ -31,6 +31,7 @@ function Cheatsheets() {
 			}}
 		>
 			<CardLink title="NPM" link="/cheatsheets/npm" />
+			<CardLink title="Vim" link="/cheatsheets/vim" />
 
 			{/* <CardLink title="Typescript" link="/cheatsheets/typescript" /> */}
 		</div>

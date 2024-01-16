@@ -21,6 +21,7 @@ import { useEffect, useState } from 'react';
 import GlobalSearch from './components/command-palette';
 import SnippetsTypescript from './snippets/typescript';
 import Snippets from './snippets';
+import CheatsheetVim from './cheatsheets/vim';
 
 1;
 
@@ -139,6 +140,7 @@ export default function App() {
 					element={<CheatsheetTypescript />}
 				/>
 				<Route path="/cheatsheets/npm" element={<CheatsheetNpm />} />
+				<Route path="/cheatsheets/vim" element={<CheatsheetVim />} />
 			</Route>,
 		),
 	);
