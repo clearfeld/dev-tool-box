@@ -24,6 +24,7 @@ import JwtDecoder from "./tools/jwt/decoder";
 import Cheatsheets from "./cheatsheets";
 import CheatsheetTypescript from "./cheatsheets/typescript";
 import CheatsheetNpm from "./cheatsheets/npm";
+import CheatsheetVim from "./cheatsheets/vim";
 
 import GlobalSearch from "./components/command-palette";
 
@@ -130,6 +131,8 @@ export default function App() {
 					path="/cheatsheets/typescript"
 					element={<CheatsheetTypescript />}
 				/>
+				<Route path="/cheatsheets/vim" element={<CheatsheetVim />} />
+
 				<Route path="/cheatsheets/npm" element={<CheatsheetNpm />} />
 			</Route>,
 		),
