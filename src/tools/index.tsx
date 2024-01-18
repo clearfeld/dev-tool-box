@@ -22,20 +22,12 @@ import hashLogo from "../assets/svgs/hash.svg";
 import textLogo from "../assets/svgs/text-convert.svg";
 import uuidIcon from "../assets/uuid.png";
 
+import "./index.scss";
+
 function Tools() {
 	return (
-		<div
-			style={{
-				position: "absolute",
-				marginLeft: "var(--sidebar-size)",
-				marginTop: "4rem",
-				top: "0",
-				left: "0",
-				display: "flex",
-				flexWrap: "wrap",
-			}}
-		>
-			<CardLink
+		<div className="selector-wrap">
+			{/* <CardLink
 				title="String Case Converter"
 				link="/tool/string/stringcase"
 				description="Converts string into different case(s)"
@@ -50,7 +42,7 @@ function Tools() {
 						}}
 					/>
 				}
-			/>
+			/> */}
 
 			<CardLink
 				title="Hash Generator"

@@ -6,17 +6,7 @@ import typescriptLogo from "../assets/svgs/typescriptsvg.svg";
 
 function Snippets() {
 	return (
-		<div
-			style={{
-				position: "absolute",
-				marginLeft: "var(--sidebar-size)",
-				marginTop: "4rem",
-				top: "0",
-				left: "0",
-				display: "flex",
-				flexWrap: "wrap",
-			}}
-		>
+		<div className="selector-wrap">
 			<CardLink
 				title="Typescript"
 				link="/snippets/typescript"

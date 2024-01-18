@@ -70,7 +70,7 @@ function HashGenerator() {
 	}
 
 	return (
-		<div className="jwt__decoder__wrapper">
+		<div className="micro-tool-wrap">
 			<h1 className="jwt__decoder__title">Hash Generator</h1>
 
 			<div className="jwt__decoder__inner-wrap">

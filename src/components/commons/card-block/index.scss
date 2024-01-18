@@ -1,11 +1,15 @@
 .card-link__ {
   &link-unstyle {
     color: var(--color-text);
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 1rem;
+    // overflow: auto;
   }
 
   &wrapper {
     background-color: var(--navbar-color-bg);
-    margin: 1rem;
+
     padding: 1.25rem 1.5rem;
     border-radius: 0.5rem;
 
@@ -27,11 +31,12 @@
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
     margin-top: 0.25rem;
-	color: var(--color-text);
+    color: var(--color-text);
   }
 
   &description {
     color: var(--color-text-sub);
+    text-wrap: nowrap;
   }
 
   &img-wrap {

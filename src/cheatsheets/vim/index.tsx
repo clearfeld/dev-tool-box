@@ -1,3 +1,4 @@
+import { GroupBlock } from "../commons";
 import "../commons.scss";
 
 const Exiting = {
@@ -367,65 +368,27 @@ const VisualMode = {
 	],
 };
 
-function GroupBlock(props: any) {
-	return (
-		<div>
-			<h3>{props.data.title}</h3>
-
-			<div className="cheatsheet__commons__group-block">
-				{props.data.items.map((item, idx) => {
-					return <HelpLine key={idx} line_obj={item} />;
-				})}
-			</div>
-		</div>
-	);
-}
-
-function HelpLine(props: any) {
-	return (
-		<div>
-			<h4 className="cheatsheet__commons__help-line__title">
-				{props.line_obj.title}
-			</h4>
-
-			<div className="cheatsheet__commons__help-line__cmd">
-				{props.line_obj.cmd}
-			</div>
-		</div>
-	);
-}
-
 function CheatsheetVim() {
 	return (
-		<div
-			style={{
-				position: "absolute",
-				marginLeft: "var(--sidebar-size)",
-				marginTop: "4rem",
-				top: "0",
-				left: "0",
-				padding: "1rem",
-				display: "flex",
-				flexWrap: "wrap",
-				gap: "2rem",
-			}}
-		>
+		<div className="micro-tool-wrap">
 			{/* <p>Npm cheatsheet</p> */}
 
-			<GroupBlock data={Exiting} />
-			<GroupBlock data={InsertMode} />
-			<GroupBlock data={Clipboard} />
-			<GroupBlock data={FindReplace} />
-			<GroupBlock data={Navigation} />
-			<GroupBlock data={NavigationWords} />
-			<GroupBlock data={NavigationLines} />
-			<GroupBlock data={NavigationCharacter} />
-			<GroupBlock data={NavigationDocument} />
-			<GroupBlock data={NavigationWindow} />
-			<GroupBlock data={NavigationSearch} />
-			<GroupBlock data={NavigationTabs} />
-			<GroupBlock data={Editing} />
-			<GroupBlock data={VisualMode} />
+			<div className="cheatsheet__commons__inner-flex">
+				<GroupBlock data={Exiting} />
+				<GroupBlock data={InsertMode} />
+				<GroupBlock data={Clipboard} />
+				<GroupBlock data={FindReplace} />
+				<GroupBlock data={Navigation} />
+				<GroupBlock data={NavigationWords} />
+				<GroupBlock data={NavigationLines} />
+				<GroupBlock data={NavigationCharacter} />
+				<GroupBlock data={NavigationDocument} />
+				<GroupBlock data={NavigationWindow} />
+				<GroupBlock data={NavigationSearch} />
+				<GroupBlock data={NavigationTabs} />
+				<GroupBlock data={Editing} />
+				<GroupBlock data={VisualMode} />
+			</div>
 		</div>
 	);
 }

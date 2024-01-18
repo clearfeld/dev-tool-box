@@ -71,7 +71,7 @@ function KeycodeInfo() {
 	}
 
 	return (
-		<div className="jwt__decoder__wrapper">
+		<div className="micro-tool-wrap">
 			{!keyCode ? (
 				<div className="tools__keycode-info__press-key">
 					Pres any key to get the Javascript event keycode

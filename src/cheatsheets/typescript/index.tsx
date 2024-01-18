@@ -1,17 +1,13 @@
 // import './index.scss';
 
+import { GroupBlock } from "../commons";
+
 function CheatsheetTypescript() {
 	return (
-		<div
-			style={{
-				position: 'absolute',
-				marginLeft: 'var(--sidebar-size)',
-				marginTop: '4rem',
-				top: '0',
-				left: '0',
-			}}
-		>
-			<p>typescript cheatsheet</p>
+		<div className="micro-tool-wrap">
+			<div className="cheatsheet__commons__inner-flex">
+				{/* <GroupBlock data={} /> */}
+			</div>
 		</div>
 	);
 }

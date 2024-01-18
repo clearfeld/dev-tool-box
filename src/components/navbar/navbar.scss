@@ -10,9 +10,24 @@
     height: 4rem;
   }
 
+  &link {
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+
+    &:hover {
+      background-color: var(--navbar-color-bg);
+    }
+  }
+
   &link-wrap {
     display: flex;
     align-items: center;
+
+    &-active {
+      border-bottom: 0.0625rem solid var(--color-global-blue);
+    }
   }
 
   &link-text {

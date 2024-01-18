@@ -2,13 +2,13 @@
 
 // import { useEffect, useState } from 'react';
 
-import hljs from 'highlight.js/lib/core';
-import javascript from 'highlight.js/lib/languages/javascript';
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
 // import 'highlight.js/scss/vs2015.scss';
 // import 'highlight.js/scss/vs.scss';
-import 'highlight.js/scss/atom-one-dark.scss';
+import "highlight.js/scss/atom-one-dark.scss";
 
-hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage("javascript", javascript);
 
 // import * as monaco from 'monaco-editor';
 
@@ -69,31 +69,37 @@ function CodeSnippet(props: any) {
 	return (
 		<div
 			style={{
-				background: 'black',
-				margin: '1rem',
-				borderRadius: '0.5rem',
-				padding: '0.25rem 1rem',
+				background: "var(--color-border)",
+				margin: "1rem",
+				borderRadius: "0.5rem",
+				padding: "0.25rem 1rem",
 			}}
 		>
-			<p>{props.title}</p>
+			<p
+				style={{
+					paddingTop: "0.5rem",
+				}}
+			>
+				{props.title}
+			</p>
 
 			<pre
 				style={{
-					fontFamily: 'Roboto',
+					fontFamily: "Roboto",
 					// lineHeight: '0.75rem',
-					fontSize: '1rem',
-					backgroundColor: '#17171a',
-					padding: '0.5rem',
-					borderRadius: '0.25rem',
+					fontSize: "1rem",
+					backgroundColor: "#17171a",
+					padding: "0.5rem",
+					borderRadius: "0.25rem",
 				}}
 			>
 				<code
 					style={{
-						tabSize: '2rem',
+						tabSize: "2rem",
 					}}
 					dangerouslySetInnerHTML={{
 						__html: hljs.highlight(props.code, {
-							language: 'javascript',
+							language: "javascript",
 						}).value,
 					}}
 				/>
@@ -104,17 +110,7 @@ function CodeSnippet(props: any) {
 
 function SnippetsTypescript() {
 	return (
-		<div
-			style={{
-				position: 'absolute',
-				marginLeft: 'var(--sidebar-size)',
-				marginTop: '4rem',
-				top: '0',
-				left: '0',
-				width: 'calc(100% - 14rem)',
-				height: 'calc(100vh - 4rem)',
-			}}
-		>
+		<div className="micro-tool-wrap">
 			{/* <MonacoEditorTest /> */}
 
 			<CodeSnippet

@@ -73,7 +73,7 @@ export default function App() {
 					<>
 						<Navbar />
 
-						<Sidebar />
+						{/* <Sidebar /> */}
 
 						<Outlet />
 					</>

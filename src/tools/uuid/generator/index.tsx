@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useReducer, useState } from 'react';
-import { jwtDecode } from 'jwt-decode';
+import { useEffect, useReducer, useState } from "react";
+import { jwtDecode } from "jwt-decode";
 
-import { v1, v4, v5 } from 'uuid';
+import { v1, v4, v5 } from "uuid";
 
-import Navbar from '../../../components/navbar';
-import Sidebar from '../../../components/sidebar';
+import Navbar from "../../../components/navbar";
+import Sidebar from "../../../components/sidebar";
 
 // import './index.scss';
 
@@ -16,7 +16,7 @@ function UuidGenerator() {
 	const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
 	return (
-		<div className="jwt__decoder__wrapper">
+		<div className="micro-tool-wrap">
 			<h1 className="jwt__decoder__title">Uuid Generator</h1>
 
 			<div className="jwt__decoder__inner-wrap">
