@@ -1,7 +1,7 @@
 // import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import icon from "../../assets/icon.svg";
-import "./Navbar.scss";
+import "./navbar.scss";
 
 import toolsIcon from "../../assets/svgs/tools.svg";
 import snippetIcon from "../../assets/svgs/code.svg";
