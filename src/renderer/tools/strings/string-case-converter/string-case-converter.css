@@ -1,18 +1,22 @@
+html {
+    --btn-primary-background: blue;
+}
+
 .string-case-converter {
     position: absolute;
     margin-left: var(--sidebar-size);
     margin-top: 4rem;
     top: 0;
     left: 0;
-    border: 1px solid pink;
-    padding: 40px;
+
+    padding: 3rem;
 
     display: flex;
     gap: 2rem;
 
 
-    /* weird overflow, fix later */
-    width: calc(100% - 20rem);
+    /* weird overflow, fix later    */
+    width: calc(100% - var(--sidebar-size) - 6rem);
 }
 
 .string-case-converter__wrapper {

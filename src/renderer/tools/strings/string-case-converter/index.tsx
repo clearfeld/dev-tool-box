@@ -98,9 +98,7 @@ function StringCaseConverter() {
 				<div className="string-case-converter__left">
 					<div className="string-case-converter__wrapper">
 						<h1>Input</h1>
-						<button className="string-case-converter__button">
-							Clear
-						</button>
+						<Button title="Test" />
 						<select
 							onChange={(event) =>
 								setSelectedOption(event.target.value)
