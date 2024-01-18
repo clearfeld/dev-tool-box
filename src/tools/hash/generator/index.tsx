@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from 'react';
-import { jwtDecode } from 'jwt-decode';
+// import { jwtDecode } from 'jwt-decode';
 
 import { md5, sha1, sha224, sha256, sha512 } from 'hash-wasm';
 
-import Navbar from '../../../components/navbar';
-import Sidebar from '../../../components/sidebar';
+// import Navbar from '../../../components/navbar';
+// import Sidebar from '../../../components/sidebar';
 
 // TODO: add verify support
 // TODO: add encode / sign support

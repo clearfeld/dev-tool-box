@@ -1,6 +1,6 @@
 // import './index.scss';
 
-import { GroupBlock } from "../commons";
+// import { GroupBlock } from "../commons";
 
 function CheatsheetTypescript() {
 	return (

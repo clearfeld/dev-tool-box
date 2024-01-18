@@ -1,6 +1,6 @@
 // import './index.scss';
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import CardLink from "../components/commons/card-block";
 import typescriptLogo from "../assets/svgs/typescriptsvg.svg";
 

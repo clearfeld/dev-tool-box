@@ -1,6 +1,5 @@
 // import './index.scss';
 
-import { Link } from "react-router-dom";
 import CardLink from "../components/commons/card-block";
 import vimLogo from "../assets/svgs/vim.svg";
 import packageLogo from "../assets/svgs/package.svg";

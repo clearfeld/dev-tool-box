@@ -4,7 +4,7 @@ export function GroupBlock(props: any) {
 			<h3>{props.data.title}</h3>
 
 			<div className="cheatsheet__commons__group-block">
-				{props.data.items.map((item, idx) => {
+				{props.data.items.map((item: any, idx: number) => {
 					return <HelpLine key={idx} line_obj={item} />;
 				})}
 			</div>

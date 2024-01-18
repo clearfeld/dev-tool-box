@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
-import Navbar from '../../../components/navbar';
-import Sidebar from '../../../components/sidebar';
+
+// import Navbar from '../../../components/navbar';
+// import Sidebar from '../../../components/sidebar';
 
 // TODO: add verify support
 // TODO: add encode / sign support

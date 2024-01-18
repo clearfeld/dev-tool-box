@@ -1,22 +1,19 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
+// import reactLogo from "./assets/react.svg";
+// import { invoke } from "@tauri-apps/api/core";
 
 import "./App.css";
 
 import {
-	MemoryRouter as Router,
 	createHashRouter,
-	Routes,
 	Route,
-	Link,
 	RouterProvider,
 	Outlet,
 	createRoutesFromElements,
 } from "react-router-dom";
 
 import Navbar from "./components/navbar";
-import Sidebar from "./components/sidebar";
+// import Sidebar from "./components/sidebar";
 
 import StringCaseConverter from "./tools/strings/string-case-converter";
 import JwtDecoder from "./tools/jwt/decoder";
@@ -31,7 +28,7 @@ import GlobalSearch from "./components/command-palette";
 import SnippetsTypescript from "./snippets/typescript";
 import Snippets from "./snippets";
 
-import CardLink from "./components/commons/card-block";
+// import CardLink from "./components/commons/card-block";
 
 import HashGenerator from "./tools/hash/generator";
 import UuidGenerator from "./tools/uuid/generator";

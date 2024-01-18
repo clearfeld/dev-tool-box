@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 interface I_InfoBlockProps {
 	title: string;
-	value: string;
+	value: string | undefined;
 }
 
 function InfoBlock(props: I_InfoBlockProps) {
@@ -22,16 +22,16 @@ function InfoBlock(props: I_InfoBlockProps) {
 function KeycodeInfo() {
 	const [keyCode, setKeyCode] = useState();
 
-	const [key, setKey] = useState();
-	const [code, setCode] = useState();
-	const [location, setLocation] = useState();
-	const [which, setWhich] = useState();
+	const [key, setKey] = useState<any>();
+	const [code, setCode] = useState<any>();
+	const [location, setLocation] = useState<string>();
+	const [which, setWhich] = useState<any>();
 	// const [charCode, setCharCode] = useState();
 
-	const [control, setControl] = useState();
-	const [alt, setAlt] = useState();
-	const [shift, setShift] = useState();
-	const [meta, setMeta] = useState();
+	const [control, setControl] = useState<any>();
+	const [alt, setAlt] = useState<any>();
+	const [shift, setShift] = useState<any>();
+	const [meta, setMeta] = useState<any>();
 
 	useEffect(() => {
 		document.addEventListener("keydown", Test);
