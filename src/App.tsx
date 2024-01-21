@@ -34,6 +34,7 @@ import HashGenerator from "./tools/hash/generator";
 import UuidGenerator from "./tools/uuid/generator";
 import Tools from "./tools";
 import KeycodeInfo from "./tools/keycode-info";
+import UrlParser from "./tools/url/parser";
 
 export default function App() {
 	const [showCmdPalette, setShowCmdPalette] = useState<boolean>(false);
@@ -103,6 +104,8 @@ export default function App() {
 				<Route path="/cheatsheets/vim" element={<CheatsheetVim />} />
 
 				<Route path="/cheatsheets/npm" element={<CheatsheetNpm />} />
+
+				<Route path="/tool/url/parser" element={<UrlParser />} />
 			</Route>,
 		),
 	);

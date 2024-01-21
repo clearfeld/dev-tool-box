@@ -111,6 +111,23 @@ function Tools() {
 				// 	/>
 				// }
 			/>
+
+			<CardLink
+				title="Url Parser"
+				link="/tool/url/parser"
+				description="Parses URLs into a tree view."
+				//Icon={
+				//	<img
+				//		src={jwtLogo}
+				//		className="svg-filter"
+				//		style={{
+				//			// filter: "grayscale(1)",
+				//			width: "2rem",
+				//			height: "2rem",
+				//		}}
+				//	/>
+				//}
+			/>
 		</div>
 	);
 }
