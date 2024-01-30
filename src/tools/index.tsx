@@ -128,6 +128,23 @@ function Tools() {
 				//	/>
 				//}
 			/>
+
+			<CardLink
+				title="Url Encoder/Decoder"
+				link="/tool/url/encode-decode"
+				description="Decode/Encode URI."
+				//Icon={
+				//	<img
+				//		src={jwtLogo}
+				//		className="svg-filter"
+				//		style={{
+				//			// filter: "grayscale(1)",
+				//			width: "2rem",
+				//			height: "2rem",
+				//		}}
+				//	/>
+				//}
+			/>
 		</div>
 	);
 }

@@ -35,6 +35,7 @@ import UuidGenerator from "./tools/uuid/generator";
 import Tools from "./tools";
 import KeycodeInfo from "./tools/keycode-info";
 import UrlParser from "./tools/url/parser";
+import UrlEncoderDecoder from "./tools/url/encode-decode";
 
 export default function App() {
 	const [showCmdPalette, setShowCmdPalette] = useState<boolean>(false);
@@ -106,6 +107,8 @@ export default function App() {
 				<Route path="/cheatsheets/npm" element={<CheatsheetNpm />} />
 
 				<Route path="/tool/url/parser" element={<UrlParser />} />
+
+				<Route path="/tool/url/encode-decode" element={<UrlEncoderDecoder />} />
 			</Route>,
 		),
 	);
