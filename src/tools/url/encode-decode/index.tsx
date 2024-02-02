@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useReducer, useState } from 'react';
 
-import Navbar from '../../../components/navbar';
-import Sidebar from '../../../components/sidebar';
+import Navbar from '@src/components/navbar';
+import Sidebar from '@src/components/sidebar';
 
 // import './index.scss';\
 

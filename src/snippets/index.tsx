@@ -1,8 +1,8 @@
 // import './index.scss';
 
 // import { Link } from "react-router-dom";
-import CardLink from "../components/commons/card-block";
-import typescriptLogo from "../assets/svgs/typescriptsvg.svg";
+import CardLink from "@src/components/commons/card-block";
+import typescriptLogo from "@assets/svgs/typescriptsvg.svg";
 
 function Snippets() {
 	return (

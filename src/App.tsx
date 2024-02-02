@@ -12,30 +12,30 @@ import {
 	createRoutesFromElements,
 } from "react-router-dom";
 
-import Navbar from "./components/navbar";
+import Navbar from "@src/components/navbar";
 // import Sidebar from "./components/sidebar";
 
-import StringCaseConverter from "./tools/strings/string-case-converter";
-import JwtDecoder from "./tools/jwt/decoder";
+import StringCaseConverter from "@src/tools/strings/string-case-converter";
+import JwtDecoder from "@src/tools/jwt/decoder";
 
-import Cheatsheets from "./cheatsheets";
-import CheatsheetTypescript from "./cheatsheets/typescript";
-import CheatsheetNpm from "./cheatsheets/npm";
-import CheatsheetVim from "./cheatsheets/vim";
+import Cheatsheets from "@src/cheatsheets";
+import CheatsheetTypescript from "@src/cheatsheets/typescript";
+import CheatsheetNpm from "@src/cheatsheets/npm";
+import CheatsheetVim from "@src/cheatsheets/vim";
 
-import GlobalSearch from "./components/command-palette";
+import GlobalSearch from "@src/components/command-palette";
 
-import SnippetsTypescript from "./snippets/typescript";
-import Snippets from "./snippets";
+import SnippetsTypescript from "@src/snippets/typescript";
+import Snippets from "@src/snippets";
 
 // import CardLink from "./components/commons/card-block";
 
-import HashGenerator from "./tools/hash/generator";
-import UuidGenerator from "./tools/uuid/generator";
-import Tools from "./tools";
-import KeycodeInfo from "./tools/keycode-info";
-import UrlParser from "./tools/url/parser";
-import UrlEncoderDecoder from "./tools/url/encode-decode";
+import HashGenerator from "@src/tools/hash/generator";
+import UuidGenerator from "@src/tools/uuid/generator";
+import Tools from "@src/tools";
+import KeycodeInfo from "@src/tools/keycode-info";
+import UrlParser from "@src/tools/url/parser";
+import UrlEncoderDecoder from "@src/tools/url/encode-decode";
 
 export default function App() {
 	const [showCmdPalette, setShowCmdPalette] = useState<boolean>(false);

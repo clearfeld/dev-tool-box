@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer, useState } from "react";
 
-import Navbar from '../../../components/navbar';
-import Sidebar from '../../../components/sidebar';
+import Navbar from "@src/components/navbar";
+import Sidebar from "@src/components/sidebar";
 
 // import './index.scss';\
 
 function UrlParser() {
-	const [text, setText] = useState<string>('http://example.com/path/index.html?message=hello&who=world');
-    const [parsedUrl, setParsedUrl] = useState<string>('');
+	const [text, setText] = useState<string>(
+		"http://example.com/path/index.html?message=hello&who=world",
+	);
+	const [parsedUrl, setParsedUrl] = useState<string>("");
 
 	useEffect(() => {
 		try {
@@ -24,7 +26,6 @@ origin: "${url.origin}"
 path: "${url.pathname}"
 search (${url.searchParams.size} fields):
 ${dictStr}host: "${url.host}"`);
-
 		} catch (error) {
 			console.log(error);
 		}
@@ -47,7 +48,7 @@ ${dictStr}host: "${url.host}"`);
 							name=""
 							id=""
 							value={text}
-                            onChange={onChangeText}
+							onChange={onChangeText}
 						/>
 					</div>
 

@@ -1,11 +1,11 @@
 // import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import icon from "../../assets/icon.svg";
+import icon from "@assets/icon.svg";
 import "./navbar.scss";
 
-import toolsIcon from "../../assets/svgs/tools.svg";
-import snippetIcon from "../../assets/svgs/code.svg";
-import sheetsIcon from "../../assets/svgs/papers.svg";
+import toolsIcon from "@assets/svgs/tools.svg";
+import snippetIcon from "@assets/svgs/code.svg";
+import sheetsIcon from "@assets/svgs/papers.svg";
 import { ReactElement, useState } from "react";
 
 type T_NavRoutes = "Tools" | "Snippets" | "Cheatsheets";

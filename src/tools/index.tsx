@@ -15,12 +15,12 @@
 // 	createRoutesFromElements,
 // } from "react-router-dom";
 
-import CardLink from "../components/commons/card-block";
+import CardLink from "@src/components/commons/card-block";
 
-import jwtLogo from "../assets/svgs/jwt.svg";
-import hashLogo from "../assets/svgs/hash.svg";
-import textLogo from "../assets/svgs/text-convert.svg";
-import uuidIcon from "../assets/uuid.png";
+import jwtLogo from "@assets/svgs/jwt.svg";
+import hashLogo from "@assets/svgs/hash.svg";
+import textLogo from "@assets/svgs/text-convert.svg";
+import uuidIcon from "@assets/uuid.png";
 
 import "./index.scss";
 

@@ -1,8 +1,8 @@
 // import './index.scss';
 
-import CardLink from "../components/commons/card-block";
-import vimLogo from "../assets/svgs/vim.svg";
-import packageLogo from "../assets/svgs/package.svg";
+import CardLink from "@src/components/commons/card-block";
+import vimLogo from "@assets/svgs/vim.svg";
+import packageLogo from "@assets/svgs/package.svg";
 
 function Cheatsheets() {
 	return (
