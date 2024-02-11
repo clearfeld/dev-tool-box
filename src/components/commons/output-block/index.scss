@@ -1,0 +1,35 @@
+.card-output__ {
+  &output-unstyle {
+    color: var(--color-text);
+    flex-grow: 1;
+    flex-basis: 0;
+    // overflow: auto;
+    margin-bottom: -1rem;
+  }
+
+  &wrapper {
+    background-color: var(--color-bg);
+
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+
+    transition: background-color var(--transition-speed) ease;
+  }
+
+  &description {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--color-text);
+  }
+
+  &title {
+    color: var(--color-text-sub);
+    margin-bottom: 0.5rem;
+    text-wrap: nowrap;
+  }
+
+  &img-wrap {
+    display: flex;
+    align-self: start;
+  }
+}

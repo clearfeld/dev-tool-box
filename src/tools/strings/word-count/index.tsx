@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useReducer, useState } from "react";
+import { BaseSyntheticEvent, useEffect, useReducer, useState } from "react";
 
 import Navbar from "@src/components/navbar";
 import Sidebar from "@src/components/sidebar";
+import OutputBlock from "@src/components/commons/output-block";
 
 // import './index.scss';\
 
@@ -14,73 +15,76 @@ Each word, character, line and sentence is counted.
 
 It is actively updated as you type.`,
 	);
-	const [wordCountLength, setwordCountLength] = useState<string>("");
+  const [wordCountLength, setWordCountLength] = useState<string>("");
+  const [charCountLength, setCharCountLength] = useState<string>("");
+  const [sentenceCountLength, setSentenceCountLength] = useState<string>("");
+  const [paragraphCountLength, setParagraphCountLength] = useState<string>("");
 
 	useEffect(() => {
     const words = text.split(' ');
     let wordCount = 0;
-    words.forEach((word) => {
-      if (word.trim() !== '') {
-        wordCount++;
-      }
-    });
+	for (const word in words) {
+		if (word.trim() !== '') {
+		  wordCount++;
+		}
+	}
 
     const lines = text.split('\n');
     let lineCount = 0;
     let sentenceCount = 0;
-    lines.forEach((line) => {
-      if (line.trim() !== '') {
-        lineCount++;
-        // Also calculate sentences for each paragraph here
-        const sentences = (line + " ").split(/[.!?]/);
-        sentences.forEach((sentence) => {
-          if (sentence.trim() !== '') {
-            sentenceCount++;
-          }
-        });
-      }
-    });
+	for (const line of lines) {
+		if (line.trim() !== '') {
+		  lineCount++;
+		  // Also calculate sentences for each paragraph here
+		  const sentences = (`${line} `).split(/[.!?]/);
+		  for (const sentence in sentences) {
+			if (sentence.trim() !== '') {
+			  sentenceCount++;
+			}
+		  }
+		}
+	}
 
-    setwordCountLength(`Word Count: ${wordCount}
-Character Count (Including Whitespaces): ${text.length}
-Sentence Count: ${sentenceCount}
-Paragraph Count: ${lineCount}
-    `);
+    setWordCountLength(`${wordCount}`);
+    setCharCountLength(`${text.length}`);
+    setSentenceCountLength(`${sentenceCount}`);
+    setParagraphCountLength(`${lineCount}`);
 	}, [text]);
 
-	function onChangeText(e: any): void {
+	function  onChangeText(e: BaseSyntheticEvent): void {
 		setText(e.target.value);
 	}
 
 	return (
-		<div className="jwt__decoder__wrapper">
+		<div className="micro-tool-wrap">
 			<h1 className="jwt__decoder__title">Word Counter</h1>
 
 			<div className="jwt__decoder__inner-wrap">
+					<textarea
+						className="jwt__decoder__textarea"
+						name=""
+						id=""
+						value={text}
+						rows={25}
+						onChange={onChangeText}
+					/>
 				<div className="jwt__decoder__right-wrap">
-					<div>
-						<p>Text</p>
-						<textarea
-							className="jwt__decoder__textarea"
-							name=""
-							id=""
-							value={text}
-							rows={10}
-							onChange={onChangeText}
-						/>
-					</div>
-
-					<div>
-						<p>Word Count</p>
-						<textarea
-							className="jwt__decoder__textarea"
-							name=""
-							id=""
-							value={wordCountLength}
-							rows={3}
-							disabled
-						/>
-					</div>
+					<OutputBlock
+						description={wordCountLength}
+						title="Word Count"
+					/>
+					<OutputBlock
+						description={charCountLength}
+						title="Character Count"
+					/>
+					<OutputBlock
+						description={sentenceCountLength}
+						title="Sentence Count"
+					/>
+					<OutputBlock
+						description={paragraphCountLength}
+						title="Paragraph Count"
+					/>
 				</div>
 			</div>
 		</div>
