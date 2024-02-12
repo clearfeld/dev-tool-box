@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { BaseSyntheticEvent, useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 
 import Navbar from "@src/components/navbar";
 import Sidebar from "@src/components/sidebar";
@@ -51,7 +51,7 @@ It is actively updated as you type.`,
     setParagraphCountLength(`${lineCount}`);
 	}, [text]);
 
-	function  onChangeText(e: BaseSyntheticEvent): void {
+	function  onChangeText(e: React.ChangeEvent<HTMLTextAreaElement>): void {
 		setText(e.target.value);
 	}
 
