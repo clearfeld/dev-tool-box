@@ -162,6 +162,23 @@ function Tools() {
 				//	/>
 				//}
 			/>
+
+			<CardLink
+				title="Word Counter"
+				link="/tool/string/word-count"
+				description="Counts the words, characters, and lines in a peice of text."
+				//Icon={
+				//	<img
+				//		src={jwtLogo}
+				//		className="svg-filter"
+				//		style={{
+				//			// filter: "grayscale(1)",
+				//			width: "2rem",
+				//			height: "2rem",
+				//		}}
+				//	/>
+				//}
+			/>
 		</div>
 	);
 }

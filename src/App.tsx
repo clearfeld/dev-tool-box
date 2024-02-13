@@ -37,6 +37,7 @@ import KeycodeInfo from "@src/tools/keycode-info";
 import UrlParser from "@src/tools/url/parser";
 import UrlEncoderDecoder from "@src/tools/url/encode-decode";
 import CSSCursors from "@src/tools/css/cursors";
+import WordCount from "@src/tools/strings/word-count";
 
 export default function App() {
 	const [showCmdPalette, setShowCmdPalette] = useState<boolean>(false);
@@ -112,6 +113,8 @@ export default function App() {
 				<Route path="/tool/url/encode-decode" element={<UrlEncoderDecoder />} />
 
 				<Route path="/tool/css/cursors" element={<CSSCursors />} />
+
+				<Route path="/tool/string/word-count" element={<WordCount />} />
 			</Route>,
 		),
 	);
